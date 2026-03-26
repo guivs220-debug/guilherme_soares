@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerador de Proposta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Gerador de Proposta</h1>
+
+<div class="container">
+
+  <label><input type="checkbox" value="187" data-name="Plano base 2 usuários - 1 conexão"> Plano base - R$187</label>
+
+  <label>
+    Usuários adicionais:
+    <input type="number" id="usuarios" value="0">
+  </label>
+
+  <label><input type="checkbox" value="89" data-name="Conexão adicional de WhatsApp"> WhatsApp - R$89</label>
+
+  <label><input type="checkbox" value="89.99" data-name="Integração Bitrix"> Bitrix - R$89,99</label>
+
+  <label><input type="checkbox" value="149" data-name="Distribuição Automática"> Distribuição - R$149</label>
+
+  <button onclick="gerar()">Gerar Proposta</button>
+
+  <pre id="resultado"></pre>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
