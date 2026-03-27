@@ -14,19 +14,6 @@ Gerador de propostas comerciais automatizado, desenvolvido para agilizar a cria�
 
 ---
 
-## 💡 Exemplo de saída
-
-```
-Plano base 2 usuários - 1 conexão | R$187,00
-Usuários adicionais | 5x R$29,00 | R$145,00
-Conexão adicional de WhatsApp | R$89,00
-Integração Bitrix | R$89,99
-
-Total mensal: R$878,99
-```
-
----
-
 ## 🛠️ Tecnologias utilizadas
 
 * HTML5
