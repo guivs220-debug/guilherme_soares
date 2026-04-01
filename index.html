@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio | Profissional</title>
+    <title>Guilherme Soares | Estrategista de CX</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body class="dark-theme"> <canvas id="particleCanvas"></canvas>
-    
+<body class="dark-theme">
+    <canvas id="particleCanvas"></canvas>
+
     <nav class="navbar">
         <div class="logo">G<span>.</span></div>
         <ul class="nav-links">
@@ -23,52 +26,103 @@
         <section id="home" class="tab-content active">
             <div class="hero-container">
                 <div class="hero-text">
-                    <h1>Estrategista de <br><span class="highlight">Experiência do Cliente</span></h1>
-                    <p>Focado em otimização de processos e retenção estratégica.</p>
+                    <span class="badge">Estrategista de CX & Retenção</span>
+                    <h1>Transformando Suporte em <br><span class="highlight">Crescimento</span></h1>
+                    <p>Especialista em otimização de processos, gestão de WABA e estratégias de faturamento na Ikatec.</p>
                 </div>
                 <div class="hero-image">
-                    <img src="./Adobe Express - file.jpg">
+                    <img src="./Adobe Express - file.jpg" alt="Guilherme Soares">
                 </div>
             </div>
         </section>
 
         <section id="sobre" class="tab-content">
-            <h2>Sobre Mim</h2>
-            <div class="grid-about">
-                <div class="bio">
-                    <p>Sou um profissional focado em soluções digitais, com experiência no desenvolvimento de projetos que unem tecnologia, comunicação e estratégia para gerar resultados reais. Ao longo da minha trajetória, venho atuando diretamente com atendimento ao cliente, automação de processos e implementação de ferramentas digitais, sempre buscando eficiência, clareza e uma experiência de alto nível para o usuário final.
-Tenho facilidade em entender necessidades de negócio e traduzi-las em soluções práticas, seja na estruturação de sistemas, organização de fluxos ou na criação de interfaces e páginas que comuniquem valor de forma objetiva. Meu trabalho é guiado por atenção aos detalhes, senso de responsabilidade e compromisso com a entrega.
-Além do lado técnico, valorizo muito o relacionamento interpessoal. Acredito que bons resultados vêm de uma comunicação clara, empatia e alinhamento constante com o cliente. Isso me permite não apenas executar tarefas, mas contribuir estrategicamente em cada projeto.
-No âmbito pessoal, sou alguém movido por evolução contínua. Estou sempre buscando aprender, melhorar minhas habilidades e explorar novas formas de gerar impacto através da tecnologia. Disciplina, consistência e vontade de crescer fazem parte da minha rotina.</p>
+            <div class="section-header">
+                <h2>Sobre Minha Atuação</h2>
+                <p class="subtitle">Metodologia aplicada a resultados</p>
+            </div>
+            
+            <div class="about-grid-container">
+                <div class="info-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Foco em CX</h3>
+                    <p>Mapeamento da jornada para antecipar necessidades e evitar o churn proativamente.</p>
                 </div>
-                <div class="skills">
-                    <div class="skill-tag">Digisac</div>
-                    <div class="skill-tag">WABA</div>
-                    <div class="skill-tag">Estratégia de Expansão</div>
+                <div class="info-card">
+                    <div class="card-icon">⚙️</div>
+                    <h3>Processos WABA</h3>
+                    <p>Domínio em fluxos via API oficial do WhatsApp, garantindo automação inteligente.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">📈</div>
+                    <h3>Expansão</h3>
+                    <p>Estratégias de Upsell e Upgrade, maximizando o faturamento da base atual.</p>
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <div class="bio-text">
+                    <p>Sou movido por evolução contínua e disciplina. Na Ikatec, uno tecnologia e empatia para entregar resultados que vão além do "ticket resolvido".</p>
+                </div>
+                <div class="skills-showcase">
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Digisac / Omnichannel</span><span>95%</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Retenção Estratégica</span><span>85%</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>WABA & APIs</span><span>90%</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="portfolio" class="tab-content">
-            <h2>Projetos de Destaque</h2>
+            <div class="section-header">
+                <h2>Cases de Sucesso</h2>
+                <p class="subtitle">Estratégias implementadas na Ikatec</p>
+            </div>
             <div class="portfolio-grid">
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Projeto Upgrade">
+                    <div class="card-tag">Expansão</div>
                     <h3>Gestão de Upgrades</h3>
-                    <p>Otimização de faturamento e expansão de conexões.</p>
+                    <p>Implementação de monitoramento ativo de limites de conexão, convertendo gargalos técnicos em novas receitas.</p>
+                    <ul class="project-list">
+                        <li>Análise de ociosidade</li>
+                        <li>Prospecção consultiva</li>
+                    </ul>
                 </div>
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Projeto Downgrade">
+                    <div class="card-tag">Retenção</div>
                     <h3>Mitigação de Churn</h3>
-                    <p>Estratégias de retenção e análise de ociosidade.</p>
+                    <p>Desenvolvimento de filtros de downgrade para entender a dor real do cliente e oferecer alternativas de retenção.</p>
+                    <ul class="project-list">
+                        <li>Entrevistas de desligamento</li>
+                        <li>Recuperação de contas</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <section id="contato" class="tab-content">
-            <h2>Vamos Conversar?</h2>
-            <p>Disponível para novos desafios e conexões profissionais.</p>
-            <a href="mailto:seuemail@exemplo.com" class="btn-contact">Enviar E-mail</a>
+            <div class="contact-container">
+                <div class="contact-text">
+                    <h2>Vamos conectar?</h2>
+                    <p>Estou aberto a novos desafios e trocas de experiências sobre tecnologia e CX.</p>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:seuemail@exemplo.com" class="contact-btn email">
+                        <span>E-mail Profissional</span>
+                    </a>
+                    <a href="https://linkedin.com/in/seu-perfil" target="_blank" class="contact-btn linkedin">
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
 
