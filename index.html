@@ -1,35 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Gerador de Proposta</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio | Profissional</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="dark-theme">
 
-<h1>Gerador de Proposta</h1>
+    <nav class="navbar">
+        <div class="logo">G<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
 
-<div class="container">
+    <main>
+        <section id="home" class="tab-content active">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1>Estrategista de <br><span class="highlight">Experiência do Cliente</span></h1>
+                    <p>Focado em otimização de processos e retenção estratégica.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/400x500" alt="Sua Foto">
+                </div>
+            </div>
+        </section>
 
-  <label><input type="checkbox" value="187" data-name="Plano base 2 usuários - 1 conexão"> Plano base - R$187</label>
+        <section id="sobre" class="tab-content">
+            <h2>Sobre Mim</h2>
+            <div class="grid-about">
+                <div class="bio">
+                    <p>Breve descrição sobre sua trajetória na Ikatec e expertise em CX.</p>
+                </div>
+                <div class="skills">
+                    <div class="skill-tag">Digisac</div>
+                    <div class="skill-tag">WABA</div>
+                    <div class="skill-tag">Estratégia de Expansão</div>
+                </div>
+            </div>
+        </section>
 
-  <label>
-    Usuários adicionais:
-    <input type="number" id="usuarios" value="0">
-  </label>
+        <section id="portfolio" class="tab-content">
+            <h2>Projetos de Destaque</h2>
+            <div class="portfolio-grid">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Projeto Upgrade">
+                    <h3>Gestão de Upgrades</h3>
+                    <p>Otimização de faturamento e expansão de conexões.</p>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Projeto Downgrade">
+                    <h3>Mitigação de Churn</h3>
+                    <p>Estratégias de retenção e análise de ociosidade.</p>
+                </div>
+            </div>
+        </section>
 
-  <label><input type="checkbox" value="89" data-name="Conexão adicional de WhatsApp"> WhatsApp - R$89</label>
+        <section id="contato" class="tab-content">
+            <h2>Vamos Conversar?</h2>
+            <p>Disponível para novos desafios e conexões profissionais.</p>
+            <a href="mailto:seuemail@exemplo.com" class="btn-contact">Enviar E-mail</a>
+        </section>
+    </main>
 
-  <label><input type="checkbox" value="89.99" data-name="Integração Bitrix"> Bitrix - R$89,99</label>
-
-  <label><input type="checkbox" value="149" data-name="Distribuição Automática"> Distribuição - R$149</label>
-
-  <button onclick="gerar()">Gerar Proposta</button>
-
-  <pre id="resultado"></pre>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
