@@ -34,9 +34,9 @@ class Particle {
     constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 5 + 0.1;
-        this.speedX = Math.random() * 0.5 - 0.25;
-        this.speedY = Math.random() * 0.5 - 0.25;
+        this.size = Math.random() * 2 + 0.1;
+        this.speedX = Math.random() * 5 - 0.25;
+        this.speedY = Math.random() * 5 - 0.25;
     }
     update() {
         this.x += this.speedX;
