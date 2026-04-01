@@ -1,24 +1,23 @@
-function gerar() {
-  let total = 0;
-  let texto = "";
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Remove active das classes de navegação
+        document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
 
-  document.querySelectorAll("input[type=checkbox]:checked").forEach(item => {
-    let valor = parseFloat(item.value);
-    let nome = item.dataset.name;
+        // Pega o ID da seção
+        const targetId = this.getAttribute('href').replace('#', '');
 
-    texto += `${nome} | R$${valor.toFixed(2)}\n`;
-    total += valor;
-  });
+        // Esconde todas as seções e mostra apenas a selecionada
+        document.querySelectorAll('.tab-content').forEach(section => {
+            section.classList.remove('active');
+            if (section.id === targetId) {
+                section.classList.add('active');
+            }
+        });
 
-  let usuarios = document.getElementById("usuarios").value;
-
-  if (usuarios > 0) {
-    let valorUsuarios = usuarios * 29;
-    texto += `Usuários adicionais | ${usuarios}x R$29,00 | R$${valorUsuarios.toFixed(2)}\n`;
-    total += valorUsuarios;
-  }
-
-  texto += `\nTotal mensal: R$${total.toFixed(2)}`;
-
-  document.getElementById("resultado").innerText = texto;
-}
+        // Scroll suave para o topo da seção
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
