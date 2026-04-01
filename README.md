@@ -1,58 +1,23 @@
-# 📄 Proposal Generator
+🌑 Minimalist Dark Portfolio
+Este é um projeto de Portfólio/Currículo Digital com design minimalista, tema escuro e navegação dinâmica. O foco principal é a apresentação de resultados e estratégias de CX (Customer Experience) e Sucesso do Cliente de forma limpa e profissional.
 
-Gerador de propostas comerciais automatizado, desenvolvido para agilizar a criação de orçamentos com formatação padronizada e cálculo automático de valores.
+✨ Demonstração
+O layout foi projetado para ser Single Page Application (SPA) no front-end, onde as seções (Home, Sobre, Portfólio e Contato) são alternadas dinamicamente sem o recarregamento da página, garantindo uma experiência de usuário fluida.
 
----
+🚀 Tecnologias Utilizadas
+HTML5: Estrutura semântica das seções e navegação.
 
-## 🚀 Funcionalidades
+CSS3: Estilização customizada com variáveis (Custom Properties), Flexbox, CSS Grid e animações de entrada (FadeIn).
 
-* ✅ Seleção de produtos e serviços
-* ✅ Cálculo automático de valores
-* ✅ Geração de texto formatado
-* ✅ Pronto para copiar e enviar ao cliente
-* ✅ Interface simples e rápida
+JavaScript (Vanilla): Lógica de manipulação de DOM para o sistema de abas dinâmicas e controle de estados ativos na navegação.
 
----
+Google Fonts: Utilização da família tipográfica Inter para um visual moderno e legível.
 
-## 🛠️ Tecnologias utilizadas
+📋 Funcionalidades
+Navegação Dinâmica: Troca de abas via Script sem refresh.
 
-* HTML5
-* CSS3
-* JavaScript (Vanilla)
+Dark Mode Nativo: Paleta de cores focada em contraste de alto nível (Preto Chumbo e Ciano).
 
----
+Galeria de Projetos: Grid responsivo para exibição de cases de sucesso (como estratégias de Upgrade e Downgrade).
 
-## 🌐 Deploy
-
-O projeto pode ser publicado gratuitamente utilizando:
-
-* Vercel
-* Netlify
-* GitHub Pages
-
----
-
-## 📦 Como usar
-
-1. Clone o repositório:
-
-```
-git clone https://github.com/seuusuario/proposal-generator.git
-```
-
-2. Abra o arquivo `index.html` no navegador
-
----
-
-## 📈 Melhorias futuras
-
-* [ ] Exportação em PDF
-* [ ] Integração com WhatsApp
-* [ ] Salvamento de propostas
-* [ ] Interface avançada (UI/UX)
-
----
-
-## 👨‍💻 Autor
-
-Desenvolvido por Guilherme Soares
+Layout Responsivo: Adaptável para diferentes tamanhos de tela (Desktop e Mobile).
