@@ -1,15 +1,13 @@
+// Navegação entre Abas
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
         
-        // Remove active das classes de navegação
         document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
         this.classList.add('active');
 
-        // Pega o ID da seção
         const targetId = this.getAttribute('href').replace('#', '');
 
-        // Esconde todas as seções e mostra apenas a selecionada
         document.querySelectorAll('.tab-content').forEach(section => {
             section.classList.remove('active');
             if (section.id === targetId) {
@@ -17,26 +15,30 @@ document.querySelectorAll('.nav-links a').forEach(link => {
             }
         });
 
-        // Scroll suave para o topo da seção
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
 
+// Partículas de Fundo
 const canvas = document.getElementById('particleCanvas');
 const ctx = canvas.getContext('2d');
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
 let particlesArray = [];
+
+function setCanvasSize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
+setCanvasSize();
 
 class Particle {
     constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 0.1;
-        this.speedX = Math.random() * 0.5 - 0.25;
-        this.speedY = Math.random() * 0.5 - 0.25;
+        this.size = Math.random() * 1.5 + 0.1;
+        this.speedX = Math.random() * 0.4 - 0.2;
+        this.speedY = Math.random() * 0.4 - 0.2;
     }
     update() {
         this.x += this.speedX;
@@ -47,7 +49,7 @@ class Particle {
         else if (this.y < 0) this.y = canvas.height;
     }
     draw() {
-        ctx.fillStyle = 'rgba(0, 242, 255, 0.5)'; // Sua cor ciano
+        ctx.fillStyle = 'rgba(0, 242, 255, 0.4)';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
@@ -55,7 +57,9 @@ class Particle {
 }
 
 function init() {
-    for (let i = 0; i < 150; i++) {
+    particlesArray = [];
+    const numberOfParticles = (canvas.width * canvas.height) / 9000;
+    for (let i = 0; i < numberOfParticles; i++) {
         particlesArray.push(new Particle());
     }
 }
@@ -67,9 +71,9 @@ function connect() {
             let dy = particlesArray[a].y - particlesArray[b].y;
             let distance = Math.sqrt(dx * dx + dy * dy);
 
-            if (distance < 150) {
-                ctx.strokeStyle = `rgba(0, 242, 255, ${1 - distance/150})`;
-                ctx.lineWidth = 0.5;
+            if (distance < 120) {
+                ctx.strokeStyle = `rgba(0, 242, 255, ${1 - distance/120})`;
+                ctx.lineWidth = 0.4;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
                 ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
@@ -89,12 +93,10 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-init();
-animate();
-
-window.addEventListener('resize', function() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    particlesArray = [];
+window.addEventListener('resize', () => {
+    setCanvasSize();
     init();
 });
+
+init();
+animate();
